@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="Game Tools">
+            <menu>
+            <item
+                android:id="@+id/nav_increment"
+                android:icon="@drawable/increment_icon_new"
+                android:title="Set Custom Increment" />
+            <item
+                android:id="@+id/nav_diceRoll"
+                android:icon="@drawable/dice_tool_icon"
+                android:title="Roll Dice" />
+            <item
+                android:id="@+id/nav_coinFlip"
+                android:icon="@drawable/coin_flip_icon"
+                android:title="Flip Coin" />
+            <item
+                android:id="@+id/nav_timer"
+                android:icon="@drawable/timer_menu_icon"
+                android:title="Timer" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Turn Tracker">
+        <menu>
+            <item
+                android:id="@+id/nav_history"
+                android:icon="@drawable/turn_history_icon"
+                android:title="History" />
+            <item
+                android:id="@+id/nav_notes"
+                android:icon="@drawable/notes_icon"
+                android:title="Notes" />
+        </menu>
+    </item>
+
+</menu>

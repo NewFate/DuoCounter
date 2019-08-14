@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ronald.counter.Counter"
+    android:configChanges="orientation"
+    android:screenOrientation="portrait"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:showIn="@layout/app_bar_counter"
+    android:id="@+id/mainLayout"
+    android:weightSum="2" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/lightPastelOrange"
+        android:id="@+id/pOneFrame"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal|bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/pOnePoison"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="@color/pastelBlue"
+                android:textSize="40dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Sub"
+                android:id="@+id/pOneSubP"
+                android:layout_gravity="left|bottom"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/pastelBlue"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/pOneAddP"
+                android:layout_gravity="right|bottom"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/pastelOrange"
+                android:background="?android:attr/selectableItemBackground" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightPastelBlue2"
+            android:text="@string/life_total2"
+            android:id="@+id/playerOneLife"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:textSize="60dp" />
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sub"
+            android:id="@+id/playerOneSub"
+            android:layout_gravity="left|top"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/pastelBlue" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15pt"
+            android:id="@+id/playerOne"
+            android:maxLength="12"
+            android:layout_gravity="center_horizontal|top"
+            android:singleLine = "true"
+            android:textColor="@color/pastelBlue"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/frameLayout"
+            android:layout_alignLeft="@+id/playerTwo"
+            android:layout_alignStart="@+id/playerTwo"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:hint="@string/player_1"
+            android:textColorHint="@color/pastelBlue" />
+
+        <Button
+            android:visibility="invisible"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:id="@+id/playerOneAdd"
+            android:layout_gravity="right|top"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/pastelOrange" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/lightPastelBlue"
+        android:id="@+id/pTwoFrame"
+        android:layout_weight="1"
+        android:layout_below="@+id/pOneFrame"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/lightPastelOrange2"
+            android:text="@string/life_total"
+            android:id="@+id/playerTwoLife"
+            android:layout_gravity="center"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:textSize="60dp" />
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub"
+            android:id="@+id/playerTwoSub"
+            android:layout_alignTop="@+id/playerTwo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/pastelBlue" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15pt"
+            android:id="@+id/playerTwo"
+            android:maxLength="12"
+            android:singleLine = "true"
+            android:layout_gravity="center_horizontal|top"
+            android:textColor="@color/pastelOrange"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_centerHorizontal="true"
+            android:textColorHint="@color/pastelOrange"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:hint="@string/player_2" />
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/playerTwoAdd"
+            android:layout_alignTop="@+id/playerTwo"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/pastelOrange"
+            android:layout_gravity="right|top" />
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center_horizontal|bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/pTwoPoison"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textSize="40dp"
+                android:textColor="@color/pastelOrange"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Sub"
+                android:id="@+id/pTwoSubP"
+                android:layout_gravity="left|bottom"
+                android:textColor="@color/pastelBlue"
+                android:layout_alignTop="@+id/pTwoPoison"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="?android:attr/selectableItemBackground"/>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:id="@+id/pTwoAddP"
+                android:layout_gravity="right|bottom"
+                android:textColor="@color/pastelOrange"
+                android:layout_alignTop="@+id/pTwoPoison"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackground" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

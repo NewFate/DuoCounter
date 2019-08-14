@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:actionOverflowButtonStyle">@style/customCounterIcon</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="customCounterIcon" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@android:drawable/ic_menu_search</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#738F9B</item>
+    </style>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_menu"
+        android:orderInCategory="100"
+        android:title="@string/games"
+        android:icon="@mipmap/games_icon_menu"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/action_mtg"
+                android:title="Magic: The Gathering"
+                android:icon="@drawable/mtg_game_icon">
+
+                <menu>
+                    <item android:id="@+id/action_20_mtg"
+                        android:title="Start at 20 life"
+                        android:icon="@drawable/mtg_game_icon"/>
+                    <item android:id="@+id/action_40_mtg"
+                        android:title="Start at 40 life"
+                        android:icon="@drawable/mtg_game_icon"/>
+                </menu>
+
+            </item>
+
+            <item
+                android:id="@+id/action_ygh"
+                android:title="Yu-Gi-Oh"
+                android:icon="@drawable/yugioh_game_icon"/>
+        </menu>
+
+        </item>
+</menu>

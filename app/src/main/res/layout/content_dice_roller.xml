@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ronald.counter.DiceRoller"
+    android:configChanges="orientation"
+    android:screenOrientation="portrait"
+    android:splitMotionEvents="false"
+    tools:showIn="@layout/activity_dice_roller">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout2">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@mipmap/d_twenty_idle"
+        android:id="@+id/dTwentyIconPic"
+        android:layout_alignTop="@+id/dTwentyIcon"
+        android:layout_alignLeft="@+id/dTwentyIcon"
+        android:layout_alignStart="@+id/dTwentyIcon" />
+
+    <Button
+        android:id="@+id/dSixIcon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_alignLeft="@+id/dSixIconPic"
+        android:layout_alignStart="@+id/dSixIconPic"
+        android:layout_marginTop="95dp" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@mipmap/dice_icon_idle"
+        android:id="@+id/dSixIconPic"
+        android:clickable="false"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_alignTop="@+id/dSixIcon"
+        android:layout_toRightOf="@+id/frameLayout2"
+        android:layout_toEndOf="@+id/frameLayout2" />
+
+    <Button
+        android:id="@+id/dTwentyIcon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_alignTop="@+id/dSixIcon"
+        android:layout_alignRight="@+id/relativeLayout"
+        android:layout_alignEnd="@+id/relativeLayout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/dTwentyIconPic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/randomNumberGen"
+            android:textColor="@color/pastelBlue"
+            android:textSize="80dp"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/randomNumberGen2"
+        android:textSize="80dp"
+        android:textColor="@color/pastelOrange"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

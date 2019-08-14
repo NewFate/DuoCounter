@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ronald.counter.timer"
+    android:configChanges="orientation"
+    android:splitMotionEvents="false"
+    android:screenOrientation="portrait"
+    tools:showIn="@layout/activity_timer">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:id="@+id/colonTimer"
+        android:textColor="@color/pastelBlue"
+        android:textSize="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minTimer"
+        android:hint="00"
+        android:gravity="center"
+        android:textSize="80dp"
+        android:textColor="@color/pastelBlue"
+        android:maxLength="2"
+        android:inputType="number"
+        android:textColorHint="@color/pastelBlue"
+        android:layout_alignTop="@+id/colonTimer"
+        android:layout_toLeftOf="@+id/colonTimer"
+        android:layout_toStartOf="@+id/colonTimer" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secTimer"
+        android:gravity="center"
+        android:hint="00"
+        android:textSize="80dp"
+        android:textColor="@color/pastelOrange"
+        android:layout_alignTop="@+id/minTimer"
+        android:layout_toRightOf="@+id/colonTimer"
+        android:layout_toEndOf="@+id/colonTimer"
+        android:maxLength="2"
+        android:inputType="number"
+        android:textColorHint="@color/pastelOrange" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetTimerButton"
+        android:background="?android:attr/selectableItemBackground"
+        android:singleLine="true"
+        android:textColor="@color/pastelBlue"
+        android:textSize="30dp"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/saveTimeButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Save Time"
+        android:id="@+id/saveTimeButton"
+        android:textColor="@color/pastelOrange"
+        android:textSize="30dp"
+        android:layout_below="@+id/minTimer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp" />
+
+</RelativeLayout>
